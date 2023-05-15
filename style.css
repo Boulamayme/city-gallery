@@ -1,0 +1,160 @@
+#parent {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  border: 2px solid blue;
+  min-height: 900px;
+  margin:auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#header {
+  background-color: #0c3f76;
+  width: 100%;
+  min-height: 200px;
+  margin: 0px;
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
+nav ul {
+  list-style-type: none;
+  padding: 10;
+  text-decoration: none;
+}
+
+#body {
+  background-color: blueviolet;
+  width: 100%;
+  min-height: 600px;
+  margin: 0px;
+  display: flex;
+}
+#footer {
+  background-color: #0c3f75;
+  width: 100%;
+  min-height: 150px;
+  margin: 0px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#nav {
+  border: 1px;
+  background-color: #9bb4ca;
+
+  flex: 1;
+  /*min-height: 700px;*/
+  width: 100%;
+}
+#main {
+  border: 1px;
+  background-color: #b5c6d6;
+
+  flex: 3;
+  min-height: 600px;
+
+  width: 100%;
+}
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center {
+  margin: 0px 80px 80px 80px;
+  text-align: justify;
+}
+img {
+  width: 250px;
+  margin-top: 30px;
+}
+
+#test {
+  margin-top: 0px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #345576;
+}
+nav ul li {
+  margin: 20px 20px 20px 20px;
+}
+#img2 {
+  width: 40px;
+}
+
+#img2,
+#test2 {
+  display: inline-block;
+  color: #27446f;
+}
+.footer-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-icons li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-icons li i {
+  font-size: 24px;
+  color: white;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+  text-align: center;
+  line-height: 10px;
+}
+
+.block img {
+  max-width: 100%;
+}
+
+.block h2 {
+  margin-top: 10px;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 800px) {
+  #nav {
+    flex: 1 0 auto;
+  }
+
+  #main {
+    flex: 3 0 auto;
+  }
+
+  #parent {
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  #nav,
+  #main {
+    width: 100%;
+  }
+
+  #main img {
+    width: 100%;
+  }
+}
